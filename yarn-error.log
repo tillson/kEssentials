@@ -1,0 +1,67 @@
+Arguments: 
+  /usr/local/bin/node /Users/tillsongalloway/.npm-global/bin/yarn init
+
+PATH: 
+  /usr/local/opt/openssl/bin:/Users/tillsongalloway/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/opt/openssl/bin:/Users/tillsongalloway/google-cloud-sdk/bin:/Users/tillsongalloway/.npm-global/bin:/Users/tillsongalloway/bin:/Users/tillsongalloway/.go/bin:/usr/local/opt/go/libexec/bin:/Users/tillsongalloway/.fastlane/bin:/usr/local/sbin:/Users/tillsongalloway/.npm-global/bin:/Users/tillsongalloway/bin:${GOPATH}/bin:${GOROOT}/bin:/Users/tillsongalloway/.fastlane/bin:/usr/local/sbin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.14.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/tillsongalloway/.npm-global/lib/node_modules/yarn/lib/cli.js:125657:13)
+      at Interface.emit (events.js:182:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:168:10)
+      at ReadStream.emit (events.js:182:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1022:36)
+      at ReadStream.emit (events.js:182:13)
+      at addChunk (_stream_readable.js:283:12)
+
+npm manifest: 
+  {
+    "name": "klaus-securitytools",
+    "version": "1.0.0",
+    "description": "Klaus security tasks",
+    "main": "build/index.js",
+    "scripts": {
+      "start": "nodemon --exec babel-node src/index.js",
+      "build": "babel -d ./build ./src",
+      "prod": "node build/index.js"
+    },
+    "author": "BuildTools <tillson.galloway@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+      "cron": "^1.7.1",
+      "dotenv": "^8.0.0",
+      "express": "^4.17.1",
+      "node-cron": "^2.0.3",
+      "request": "^2.88.0"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.4.4",
+      "@babel/core": "^7.4.5",
+      "@babel/node": "^7.4.5",
+      "@babel/plugin-proposal-class-properties": "^7.4.4",
+      "@babel/preset-env": "^7.4.5",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-es2015": "^6.24.0",
+      "klaus": "../klausbot",
+      "rimraf": "^2.6.1"
+    },
+    "repository": "https://github.com/tillson/klaus-sectools.git"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
