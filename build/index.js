@@ -39,6 +39,12 @@ Object.defineProperty(exports, "WeatherCommand", {
     return _weather.default;
   }
 });
+Object.defineProperty(exports, "CLIBot", {
+  enumerable: true,
+  get: function () {
+    return _cli.default;
+  }
+});
 
 var _ask = _interopRequireDefault(require("./commands/ask"));
 
@@ -51,5 +57,7 @@ var _shitpost = _interopRequireDefault(require("./commands/shitpost"));
 var _trivia = _interopRequireDefault(require("./commands/trivia"));
 
 var _weather = _interopRequireDefault(require("./commands/weather"));
+
+var _cli = _interopRequireDefault(require("./bots/cli"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -11,28 +11,24 @@ export default class CLIBot extends Bot {
 
   constructor(options) {
     super(options);
-    this.components.push(new PingCommand());
 
     this.initializeCLI();
   }
 
   /*
   * On message trigger event (override)
-  * Slack bot receieved a message from one of its triggers.
   */
-  onMessageTrigger = async (payload) => {
-    for (var i = 0; i < this.components.length; i++) {
-      if (this.components[i] instanceof CommandTrigger && this.components[i].stringStartsWithCommand(payload.text)) {
-        this.components[i].handleCommand(payload.text);
-        continue;
-      }
+ onMessageTrigger = async (payload) => {
+  console.log(payload);
+  for (var i = 0; i < this.components.length; i++) {
+    if (this.components[i].commandString && this.components[i].stringStartsWithCommand(payload.text)) {
+      this.components[i].handleCommand(payload.text);
     }
   }
+}
 
   /*
   * Send message (override)
-  * Slack bots can send messages that its triggers send it.
-  * Note that the Slack username field is actually Klaus's title field.
   */
   sendMessage = (message) => {
     try {

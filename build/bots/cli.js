@@ -18,10 +18,11 @@ class CLIBot extends _klaus.Bot {
     super(options);
 
     _defineProperty(this, "onMessageTrigger", async payload => {
+      console.log(payload);
+
       for (var i = 0; i < this.components.length; i++) {
-        if (this.components[i] instanceof _klaus.CommandTrigger && this.components[i].stringStartsWithCommand(payload.text)) {
+        if (this.components[i].commandString && this.components[i].stringStartsWithCommand(payload.text)) {
           this.components[i].handleCommand(payload.text);
-          continue;
         }
       }
     });
@@ -38,12 +39,10 @@ class CLIBot extends _klaus.Bot {
       }
     });
 
-    this.components.push(new _klaus.PingCommand());
     this.initializeCLI();
   }
   /*
   * On message trigger event (override)
-  * Slack bot receieved a message from one of its triggers.
   */
 
 

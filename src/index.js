@@ -5,4 +5,14 @@ import ShitpostCommand from './commands/shitpost';
 import TriviaCommand from './commands/trivia';
 import WeatherCommand from './commands/weather';
 
-export { AskCommand, ClapCommand, PhishCommand, ShitpostCommand, TriviaCommand, WeatherCommand };
+import CLIBot from './bots/cli'
+
+export {
+  AskCommand,
+  ClapCommand,
+  PhishCommand,
+  ShitpostCommand,
+  TriviaCommand,
+  WeatherCommand,
+  CLIBot
+};
